@@ -24,3 +24,14 @@ else:
     for i in range(len(participants)):
         print(f"{i + 1}. {participants[i]['name']} - {participants[i]['track']}")
 
+    # Task 3: Track Diversity Report
+    print("\nTracks offered in this event:")
+    unique_tracks = set()
+    for p in participants:
+        unique_tracks.add(p["track"])
+
+    track_list = list(unique_tracks)
+    print(", ".join(track_list))
+
+    if len(unique_tracks) < 2:
+        print("Not enough variety in tracks.")
