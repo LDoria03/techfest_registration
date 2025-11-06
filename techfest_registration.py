@@ -49,3 +49,16 @@ else:
 
     if not duplicate_found:
         print("No duplicate names.")
+
+    # Task 5: Track Summary Report
+    print("\nParticipants per track:")
+    track_count = {}
+
+    for p in participants:
+        if p["track"] in track_count:
+            track_count[p["track"]] += 1
+        else:
+            track_count[p["track"]] = 1
+
+    for track in track_count:
+        print(f"{track}: {track_count[track]}")
